@@ -8,4 +8,5 @@ public class Player extends Board {
         return move = Integer.parseInt(scanner.nextLine());
     }
 
+
 }

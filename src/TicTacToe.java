@@ -1,14 +1,25 @@
 public class TicTacToe {
     public static void main(String[] args) {
         Start start = new Start();
-        System.out.println(start);
         Board board = new Board();
         Player player = new Player();
-        board.playerTurn(player);
         Computer computer = new Computer();
-        board.addComputerMove(computer.move());
+        System.out.println(start);
 
-
+        while (true) {
+            board.addPlayerMove(player);
+            board.addComputerMove(computer.move());
+            if (board.playerWon()) {
+                System.out.println("YOU WONNN");
+            }
+            if (board.computerWon()) {
+                System.out.println("Sorry too powerful");
+            }
+            if (board.itsADraw()) {
+                System.out.println("It's a tie");
+            }
+        }
     }
+
 }
 

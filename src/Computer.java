@@ -9,7 +9,10 @@ public class Computer {
     public int move() {
         Board board = new Board();
         int move = computerMove();
-        while (!board.isValidMove(move)) {
+        while (true) {
+            if (board.isValidMove(move)) {
+                break;
+            }
             move = computerMove();
         }
         return move;
