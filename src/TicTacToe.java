@@ -4,9 +4,9 @@ public class TicTacToe {
         System.out.println(start);
         Board board = new Board();
         Player player = new Player();
-        board.printMove(player);
-
-
+        board.playerTurn(player);
+        Computer computer = new Computer();
+        board.addComputerMove(computer.move());
 
 
     }
